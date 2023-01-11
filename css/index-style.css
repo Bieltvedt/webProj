@@ -1,0 +1,28 @@
+html, body { 
+    overflow-y:auto; 
+    height: 100%;
+    margin:0;
+}
+
+.index-page {
+    color: #645CAA;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.topbar {
+    background-color: #A084CA;
+    height: 125px;
+    display: flex;
+}
+
+.topbar div {
+    flex: 1 1 0;
+}
+
+.content {
+    background-color: #BFACE0;
+    flex-grow: 1;
+    display:
+}

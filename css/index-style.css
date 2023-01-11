@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Jacques+Francois&display=swap');
+
 html, body { 
     overflow-y:auto; 
     height: 100%;
@@ -9,16 +11,21 @@ html, body {
     height: 100%;
     display: flex;
     flex-direction: column;
+    font-family: "Jacques Francois";
 }
 
 .topbar {
     background-color: #A084CA;
-    height: 125px;
+    height: 150px;
     display: flex;
 }
 
 .topbar div {
     flex: 1 1 0;
+}
+
+.welc {
+    font-size: 75px;
 }
 
 .content {

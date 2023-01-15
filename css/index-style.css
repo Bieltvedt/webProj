@@ -15,9 +15,39 @@ html, body {
     font-family: "Jacques Francois";
 }
 
+.floating-stars {
+    position: absolute;
+    top: 150px;
+    mix-blend-mode: darken;
+    z-index: 0;
+}
+
+.floating-stars {
+    position: absolute;
+    top: 150px;
+    left: -50px;
+    mix-blend-mode: darken;
+    z-index: 0;
+    animation: scrollBanner 4s infinite;
+}
+
+.floating-stars:nth-of-type(2){
+    left:60vh;
+}
+
+@keyframes scrollBanner {
+    from { transform : translateX(0) }
+    20% { transform: translateX(-10%) }
+    40% { transform: translateX(10%) }
+    60% { transform: translateX(-10%) }
+    80% { transform: translateX(10%) }
+    to   { transform : translateX(0) }
+}
+
 
 /* Topbar */
 .topbar {
+    z-index: 1;
     background-color: #A084CA;
     height: 150px;
     display: flex;
@@ -74,6 +104,7 @@ html, body {
 
 /* Signup and login boxes */
 .signup-login {
+    z-index: 1;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -86,6 +117,10 @@ html, body {
     -moz-box-shadow: 10px 11px 12px 2px rgba(0,0,0,0.45);
     box-shadow: 10px 11px 12px 2px rgba(0,0,0,0.45);
     transition: all 0.4s;
+}
+
+.signup-login * {
+    z-index: 1;
 }
 
 .signup-login:nth-of-type(2) {

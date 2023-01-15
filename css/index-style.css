@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Jacques+Francois&display=swap');
 
+/* Main outer containers */
 html, body { 
     overflow-y:auto; 
     height: 100%;
@@ -14,10 +15,15 @@ html, body {
     font-family: "Jacques Francois";
 }
 
+
+/* Topbar */
 .topbar {
     background-color: #A084CA;
     height: 150px;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
 }
 
 .topbar div {
@@ -28,8 +34,146 @@ html, body {
     font-size: 75px;
 }
 
+.quote-container p {
+    margin-top: 0.2em;
+    margin-bottom: 0.75em;
+}
+
+.quote {
+    font-size: 30px
+}
+
+.author {
+    font-size: 20px;
+    font-style: italic;
+    margin-left: 5px;
+}
+
+
+/* Content cointainer */
 .content {
     background-color: #BFACE0;
     flex-grow: 1;
-    display:
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin:0;
+}
+
+.content-center {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    /* padding-top: 50px;
+    padding-bottom: 50px; */
+}
+
+
+/* Signup and login boxes */
+.signup-login {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background-color: #EBC7E8;
+    width: 100%;
+    min-height: 50vh;
+    padding: 20px;
+    padding-top: 0;
+    -webkit-box-shadow: 10px 11px 12px 2px rgba(0,0,0,0.45);
+    -moz-box-shadow: 10px 11px 12px 2px rgba(0,0,0,0.45);
+    box-shadow: 10px 11px 12px 2px rgba(0,0,0,0.45);
+    transition: all 0.4s;
+}
+
+.signup-login:nth-of-type(2) {
+    margin-left: 40px;
+}
+
+.signup-login p {
+    align-self: flex-start;
+    font-size: 40px;
+}
+
+.signup-login form {
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.signup-login input[type=text] {
+    color: #645CAA;
+    background-color: #D9D9D9;
+    font-family: "Jacques Francois";
+    font-size: 24px;
+    min-height: 5vh;
+    transition: all 0.4s;
+    /* also we could have box shadow always or just on focus/hover */
+    /* -webkit-box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
+    -moz-box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
+    box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45); */
+    /* unsure if with or without border is better */
+    border: none; 
+}
+
+.signup-login input[type=text]:nth-child(1){
+    margin-bottom: 30px;
+    margin-top: 5px
+}
+
+.signup-login input[type=text]:nth-child(2){
+    margin-bottom: 5px
+}
+
+.signup-login input[type=text]:focus {
+    -webkit-box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
+    -moz-box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
+    box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
+    outline: none;
+    border: 3px outset #645CAA;
+    transition: all 0.3s;
+}
+
+.signup-login input[type=text]:hover {
+    -webkit-box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
+    -moz-box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
+    box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
+    outline: none;
+    transition: all 0.3s;
+}
+
+.signup-login input[type=submit] {
+    color: #645CAA;
+    background-color: #D9D9D9;
+    font-family: "Jacques Francois";
+    font-size: 25px;
+    min-height: 6vh;
+    width: max-content;
+    padding-left: 30px;
+    padding-right: 30px;
+    align-self: center;
+    /* -webkit-box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
+    -moz-box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
+    box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45); */
+    /* unsure if with or without border is better */
+    border: none; 
+}
+
+.signup-login input[type=submit]:focus {
+    -webkit-box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
+    -moz-box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
+    box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
+    outline: none;
+}
+
+.signup-login input[type=submit]:hover {
+    -webkit-box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
+    -moz-box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
+    box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
+    outline: none;
+    transition: all 0.2s;
 }

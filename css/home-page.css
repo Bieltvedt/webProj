@@ -7,6 +7,10 @@ html, body {
     margin:0;
 }
 
+.instr {
+    font-size: 30px;
+}
+
 /* main big box */
 .big-pink {
     display: flex;

@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Jacques+Francois&display=swap');
+
+/* Main outer containers */
+html, body { 
+    overflow-y:auto; 
+    height: 100%;
+    margin:0;
+}
+
+/* main big box */
+.big-pink {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background-color: #EBC7E8;
+    width: 100%;
+    min-height: 50vh;
+    padding: 20px;
+    padding-top: 0;
+    -webkit-box-shadow: 10px 11px 12px 2px rgba(0,0,0,0.45);
+    -moz-box-shadow: 10px 11px 12px 2px rgba(0,0,0,0.45);
+    box-shadow: 10px 11px 12px 2px rgba(0,0,0,0.45);
+    transition: all 0.4s;
+}
+
+.small-pink {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background-color: #EBC7E8;
+    width: 100%;
+    min-height: 50vh;
+    padding: 20px;
+    padding-top: 0;
+    -webkit-box-shadow: 10px 11px 12px 2px rgba(0,0,0,0.45);
+    -moz-box-shadow: 10px 11px 12px 2px rgba(0,0,0,0.45);
+    box-shadow: 10px 11px 12px 2px rgba(0,0,0,0.45);
+    transition: all 0.4s;
+}

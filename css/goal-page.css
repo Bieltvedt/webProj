@@ -1,172 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Jacques+Francois&display=swap');
 
-/* Main outer containers */
-html, body { 
-    cursor: local("t00624.cur"), wait;
-    overflow:hidden; 
-    height: 100%;
-    margin:0;
-}
-
-.floating-stars {
-    position: absolute;
-    top: 150px;
-    left: -50px;
-    mix-blend-mode: darken;
-    z-index: 0;
-    animation: scrollBanner 4s infinite;
-    image-rendering: pixelated;
-}
-
-.floating-stars:nth-of-type(2){
-    left:50vh;
-    /* width: 50%; */
-}
-
-.floating-stars:nth-of-type(3){
-    left:100vh;
-}
-
-.floating-stars:nth-of-type(4){
-    left:150vh;
-    /* width: 40%; */
-}
-
-.floating-stars:nth-of-type(5){
-    left:50vh;
-    top: 50%;
-}
-
-.floating-stars:nth-of-type(6){
-    left:100vh;
-    top: 50%;
-}
-
-.floating-stars:nth-of-type(7){
-    left:150vh;
-    top: 50%;
-}
-
-.floating-stars:nth-of-type(8){
-    /* left:150vh; */
-    top: 50%;
-}
-
-.floating-stars:nth-of-type(9){
-    left:150vh;
-    top:90%;
-}
-
-.floating-stars:nth-of-type(10){
-    left:100vh;
-    top: 90%;
-}
-
-.floating-stars:nth-of-type(11){
-    left:50vh;
-    top: 90%;
-}
-.floating-stars:nth-of-type(12){
-    /* left:150vh; */
-    top: 90%;
-}
-@keyframes scrollBanner {
-    from { transform : translateX(0) }
-    20% { transform: translateX(-10%) }
-    40% { transform: translateX(10%) }
-    60% { transform: translateX(-10%) }
-    80% { transform: translateX(10%) }
-    to   { transform : translateX(0) }
-}
-
-
-.home-page {
-    color: #645CAA;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    font-family: "Jacques Francois";
-    overflow: auto;
-}
-
-.instr {
-    font-size: 30px;
-}
-
-
-/* Topbar */
+/* Topbar modification*/
 .topbar {
-    background-color: #A084CA;
     height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 10px;
 }
-
-.bottom-buttons {
-    display: flex;
-    flex-direction: row;
-    padding-right: 10px;
-    padding-left: 10px;
-    z-index: 1;
-}
-
 .topbar div {
     flex: 1 1 0;
 }
 
-.welc {
-    font-size: 75px;
-}
 
-.content {
-    background-color: #BFACE0;
-    margin:0;
-    height: 100%;
-}
-
+/* content container modification */
 .content-center {
-    font-family: "Jacques Francois";
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 40px;
-    padding-left: 40px;
-    padding-right: 40px;
     height: 100%;
 }
 
-/* main big box */
-.big-pink {
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    background-color: #EBC7E8;
-    width: 100%;
-    max-height: 60vh;
-    overflow-y: scroll;
-    -webkit-box-shadow: 10px 11px 12px 2px rgba(0,0,0,0.45);
-    -moz-box-shadow: 10px 11px 12px 2px rgba(0,0,0,0.45);
-    box-shadow: 10px 11px 12px 2px rgba(0,0,0,0.45);
-    transition: all 0.4s;
-}
 
-.goal-list {
-    padding-left: 0;
-}
-
-.add-goal {
-    color: #645CAA;
-    background-color: #D9D9D9;
-    font-family: "Jacques Francois";
-    font-size: 24px;
-    min-width: 26vh;
-    min-height: 10vh;
-}
-
+/* list of goals */
 .goal-entry {
     display: flex;
     flex-direction: column;
@@ -186,8 +39,6 @@ html, body {
     padding-bottom: 10px;
     margin: 20px;
 }
-
-
 .goal-info p {
     margin-top: 3;
     margin-bottom: 0;
@@ -201,48 +52,29 @@ html, body {
     margin-top: 0;
     vertical-align: top; 
 }
-
 .goal-title p {
     margin-top: 0;
     font-size: 28px;
 }
-
 .goal-title p:nth-child(1){
     flex-grow: 1;
     font-size: 32px;
 }
-
 .goal-desc {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
 }
-
 .goal-desc p {
     margin-top: 0;
 }
-
 .desc-mot {
     font-size: 24px; 
 }
 
-.subgoals-completed {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #D9D9D9;
-    font-family: "Jacques Francois";
-    font-size: 24px;
-    min-height: 18vh;
-    min-width: 35vh;
-}
 
-.subgoals-completed p {
-    margin: 0;
-}
-
+/* list of subgoals */
 .subgoal-list {
     padding-left: 0;
     margin-left: 20px;
@@ -254,22 +86,21 @@ html, body {
     display: flex;
     flex-direction: row;
     gap: 20px;
-    /* background-color: #D9D9D9; */
     font-family: "Jacques Francois";
     font-size: 20px;
     margin-bottom: 20px;
 }
-
 .subgoal-entry div {
     flex-grow: 1;
     background-color: #D9D9D9;
 }
-
 .subgoal-entry p {
     margin-left: 10px;
     font-size: 22px;
 }
 
+
+/* different types of subgoals */
 .boolean-sg {
     justify-self: end;
     color: #645CAA;
@@ -278,7 +109,6 @@ html, body {
     font-size: 24px;
     min-width: 12vh;
 }
-
 .money-sg {
     justify-self: end;
     color: #645CAA;
@@ -287,7 +117,6 @@ html, body {
     font-size: 24px;
     min-width: 12vh;
 }
-
 .repeat-sg {
     justify-self: end;
     color: #645CAA;
@@ -296,6 +125,17 @@ html, body {
     font-size: 20px;
     min-width: 12vh;
 }
+
+
+/* bottom button box */
+.bottom-buttons {
+    display: flex;
+    flex-direction: row;
+    padding-right: 10px;
+    padding-left: 10px;
+    z-index: 1;
+}
+
 
 
 .goal-info:focus {
@@ -325,23 +165,6 @@ html, body {
 }
 
 .subgoal-entry div:hover {
-    -webkit-box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
-    -moz-box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
-    box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
-    outline: none;
-    transition: all 0.3s;
-}
-
-button:focus {
-    -webkit-box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
-    -moz-box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
-    box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
-    outline: none;
-    border: 3px outset #645CAA;
-    transition: all 0.3s;
-}
-
-button:hover {
     -webkit-box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
     -moz-box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
     box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);

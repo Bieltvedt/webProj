@@ -1,192 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Jacques+Francois&display=swap');
 
-/* Main outer containers */
-html, body { 
-    overflow-y:hidden; 
-    height: 100%;
-    margin:0;
-    cursor: url(https://cur.cursors-4u.net/symbols/sym-3/sym253.ani), url(https://cur.cursors-4u.net/symbols/sym-3/sym253.png), auto !important;
-}
-
-.floating-stars {
-    position: absolute;
-    top: 150px;
-    left: -50px;
-    mix-blend-mode: darken;
-    z-index: 0;
-    animation: scrollBanner 0.5s infinite;
-    image-rendering: pixelated;
-}
-
-.floating-stars:nth-of-type(2){
-    left:50vh;
-    /* width: 50%; */
-}
-
-.floating-stars:nth-of-type(3){
-    left:100vh;
-}
-
-.floating-stars:nth-of-type(4){
-    left:150vh;
-    /* width: 40%; */
-}
-
-.floating-stars:nth-of-type(5){
-    left:50vh;
-    top: 50%;
-}
-
-.floating-stars:nth-of-type(6){
-    left:100vh;
-    top: 50%;
-}
-
-.floating-stars:nth-of-type(7){
-    left:150vh;
-    top: 50%;
-}
-
-.floating-stars:nth-of-type(8){
-    /* left:150vh; */
-    top: 50%;
-}
-
-.floating-stars:nth-of-type(9){
-    left:150vh;
-    top:90%;
-}
-
-.floating-stars:nth-of-type(10){
-    left:100vh;
-    top: 90%;
-}
-
-.floating-stars:nth-of-type(11){
-    left:50vh;
-    top: 90%;
-}
-.floating-stars:nth-of-type(12){
-    /* left:150vh; */
-    top: 90%;
-}
-
-@keyframes scrollBanner {
-    from { transform : translateX(0) }
-    20% { transform: translateX(-10%) }
-    40% { transform: translateX(10%) }
-    60% { transform: translateX(-10%) }
-    80% { transform: translateX(10%) }
-    to   { transform : translateX(0) }
-}
 
 
-.bottom-buttons {
-    display: flex;
-    flex-direction: row;
-    padding-right: 10px;
-    padding-left: 10px;
-    z-index: 1;
-}
-
-.home-page {
-    color: #645CAA;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    font-family: "Jacques Francois";
-}
-
+/* topbar modification */
 .info {
     display: flex;
     flex-direction: column;
 }
-
 .instr {
     font-size: 30px;
     margin: 0;
 }
-
 .wiki-link {
     align-self: flex-end;
     font-size: 24px;
     margin-right: 20px;
     cursor: url(https://cur.cursors-4u.net/symbols/sym-3/sym253.ani), url(https://cur.cursors-4u.net/symbols/sym-3/sym253.png), auto !important;
 }
-
-/* Topbar */
-.topbar {
-    z-index: 1;
-    background-color: #A084CA;
-    height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 10px;
-}
-
 .topbar div {
     max-height: 150px;
     flex: 1 1 0; 
     display: flex;
 }
-
 .topbar div:nth-of-type(1) {
     align-items: center;
 }
 
-.welc {
-    font-size: 75px;
-}
 
-.content {
-    background-color: #BFACE0;
-    margin:0;
-    height: 100%;
-}
-
+/* content center modification */
 .content-center {
-    font-family: "Jacques Francois";
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 40px;
-    padding-left: 40px;
-    padding-right: 40px;
-    height: 100%;
 }
 
-/* main big box */
-.big-pink {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    z-index: 1;
-    background-color: #EBC7E8;
-    width: 100%;
-    max-height: 60vh;
-    overflow-y: scroll;
-    -webkit-box-shadow: 10px 11px 12px 2px rgba(0,0,0,0.45);
-    -moz-box-shadow: 10px 11px 12px 2px rgba(0,0,0,0.45);
-    box-shadow: 10px 11px 12px 2px rgba(0,0,0,0.45);
-    transition: all 0.4s;
-}
 
-.goal-list {
-    padding-left: 0;
-}
-
-.add-goal {
-    color: #645CAA;
-    background-color: #D9D9D9;
-    font-family: "Jacques Francois";
-    font-size: 24px;
-    min-width: 26vh;
-    min-height: 10vh;
-    cursor: url(https://cur.cursors-4u.net/symbols/sym-3/sym253.ani), url(https://cur.cursors-4u.net/symbols/sym-3/sym253.png), auto !important;
-}
-
+/* list of goals */
 .goal-entry {
     display: flex;
     flex-direction: row;
@@ -206,7 +56,6 @@ html, body {
     min-height: 18vh;
     padding-bottom: 10px;
 }
-
 .goal-info p {
     margin-top: 3;
     margin-bottom: 0;
@@ -214,7 +63,6 @@ html, body {
     margin-right: 10px;
     color: #645CAA;
 }
-
 .goal-info a {
     text-decoration: none;
     cursor: url(https://cur.cursors-4u.net/symbols/sym-3/sym253.ani), url(https://cur.cursors-4u.net/symbols/sym-3/sym253.png), auto !important;
@@ -226,17 +74,14 @@ html, body {
     margin-top: 0;
     vertical-align: top;
 }
-
 .goal-title p {
     margin-top: 0;
     font-size: 28px;
 }
-
 .goal-title p:nth-child(1){
     flex-grow: 1;
     font-size: 32px;
 }
-
 .desc-mot {
     font-size: 24px; 
 }
@@ -252,11 +97,22 @@ html, body {
     min-height: 18vh;
     min-width: 35vh;
 }
-
 .subgoals-completed p {
     margin: 0;
 }
 
+
+/* button box */
+.bottom-buttons {
+    display: flex;
+    flex-direction: row;
+    padding-right: 10px;
+    padding-left: 10px;
+    z-index: 1;
+}
+
+
+/* hover and focus effects */
 .goal-info:focus {
     -webkit-box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
     -moz-box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
@@ -265,7 +121,6 @@ html, body {
     border: 3px outset #645CAA;
     transition: all 0.3s;
 }
-
 .goal-info:hover {
     -webkit-box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
     -moz-box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
@@ -282,25 +137,7 @@ html, body {
     border: 3px outset #645CAA;
     transition: all 0.3s;
 }
-
 .subgoals-completed:hover {
-    -webkit-box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
-    -moz-box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
-    box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
-    outline: none;
-    transition: all 0.3s;
-}
-
-.add-goal:focus {
-    -webkit-box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
-    -moz-box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
-    box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
-    outline: none;
-    border: 3px outset #645CAA;
-    transition: all 0.3s;
-}
-
-.add-goal:hover {
     -webkit-box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
     -moz-box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
     box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);

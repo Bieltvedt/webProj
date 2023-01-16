@@ -87,12 +87,20 @@ html, body {
     font-family: "Jacques Francois";
 }
 
-.instr {
-    font-size: 30px;
+.info {
+    display: flex;
+    flex-direction: column;
 }
 
-a {
+.instr {
     font-size: 30px;
+    margin: 0;
+}
+
+.wiki-link {
+    align-self: flex-end;
+    font-size: 24px;
+    margin-right: 20px;
 }
 
 /* Topbar */
@@ -107,7 +115,13 @@ a {
 }
 
 .topbar div {
-    flex: 1 1 0;
+    max-height: 150px;
+    flex: 1 1 0; 
+    display: flex;
+}
+
+.topbar div:nth-of-type(1) {
+    align-items: center;
 }
 
 .welc {
@@ -187,6 +201,11 @@ a {
     margin-bottom: 0;
     margin-left: 10px;
     margin-right: 10px;
+    color: #645CAA;
+}
+
+.goal-info a {
+    text-decoration: none;
 }
 
 .goal-title {

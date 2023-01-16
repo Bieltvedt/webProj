@@ -5,6 +5,7 @@ html, body {
     overflow-y:auto; 
     height: 100%;
     margin:0;
+    cursor: url(https://cur.cursors-4u.net/symbols/sym-3/sym253.ani), url(https://cur.cursors-4u.net/symbols/sym-3/sym253.png), auto !important;
 }
 
 .index-page {
@@ -196,6 +197,7 @@ html, body {
     box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45); */
     /* unsure if with or without border is better */
     border: none; 
+    cursor: url(https://cur.cursors-4u.net/symbols/sym-3/sym253.ani), url(https://cur.cursors-4u.net/symbols/sym-3/sym253.png), auto !important;
 }
 
 .signup-login input[type=submit]:focus {

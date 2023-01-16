@@ -5,6 +5,7 @@ html, body {
     overflow-y:hidden; 
     height: 100%;
     margin:0;
+    cursor: url(https://cur.cursors-4u.net/symbols/sym-3/sym253.ani), url(https://cur.cursors-4u.net/symbols/sym-3/sym253.png), auto !important;
 }
 
 .home-page {
@@ -82,6 +83,7 @@ html, body {
     font-size: 24px;
     min-width: 26vh;
     min-height: 10vh;
+    cursor: url(https://cur.cursors-4u.net/symbols/sym-3/sym253.ani), url(https://cur.cursors-4u.net/symbols/sym-3/sym253.png), auto !important;
 }
 
 .goal-entry {

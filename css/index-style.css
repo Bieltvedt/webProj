@@ -151,6 +151,20 @@ html, body {
     padding-bottom: 50px; */
 }
 
+.signup-format {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+}
+
+/* .signup-format > * {
+    align-self: center;
+    align-items: center;
+    align-content: center;
+} */
 
 /* Signup and login boxes */
 .signup-login {

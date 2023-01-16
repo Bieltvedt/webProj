@@ -35,7 +35,7 @@
                 <!-- logo at some point-->
             </div>
             <div class="quote-container">
-                <!-- currently hardcoded, will later be a call to a free quote api -->
+                <!-- currently hardcoded, will later be a call to a free quote api (no)-->
                 <p class="quote">quote:</p>
                 <p>we are never defeated unless we give up on god</p>
                 <p class="author">ronald reagan</p>
@@ -54,8 +54,26 @@
                 <div class="signup-login">
                     <p>start your journey:</p>
                     <form class="signup/login-form" action="home-page.html">
-                        <input type="text" placeholder="username" name="username:" id="usern-signin" value="">
-                        <input type="text" placeholder="password" name="password:" id="password-signin" value="">
+                        <div class="signup-format"> 
+                            <input type="text" placeholder="name" name="name:" id="user-name" value="">
+                            <input type="text" placeholder="email" name="email:" id="email" value="">
+                        </div>
+                        <div class="signup-format"> 
+                            <input type="text" placeholder="username" name="username:" id="usern-signin" value="">
+                            <input type="text" placeholder="password" name="password:" id="password-signin" value="">
+                        </div>
+                        <div class="signup-format"> 
+                            <input type="text" placeholder="address" name="addr:" id="user-addr" value="">
+                            <input type="text" placeholder="country" name="country:" id="user-country" value="">    
+                        </div>
+                        <div class="signup-format"> 
+                            <input type="text" placeholder="zip" name="zip:" id="user-zip" value="">
+                            <input type="text" placeholder="sex" name="country:" id="user-country" value=""> 
+                        </div>
+                        <div class="signup-format"> 
+                            <input type="text" placeholder="language" name="country:" id="user-country" value="">
+                            <input type="text" placeholder="bio" name="country:" id="user-country" value="">
+                        </div>
                         <input type="submit" value="sign up">
                     </form>
                 </div>

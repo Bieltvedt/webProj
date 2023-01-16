@@ -14,7 +14,7 @@ html, body {
     left: -50px;
     mix-blend-mode: darken;
     z-index: 0;
-    animation: scrollBanner 4s infinite;
+    animation: scrollBanner 0.5s infinite;
     image-rendering: pixelated;
 }
 
@@ -71,6 +71,16 @@ html, body {
     top: 90%;
 }
 
+@keyframes scrollBanner {
+    from { transform : translateX(0) }
+    20% { transform: translateX(-10%) }
+    40% { transform: translateX(10%) }
+    60% { transform: translateX(-10%) }
+    80% { transform: translateX(10%) }
+    to   { transform : translateX(0) }
+}
+
+
 .bottom-buttons {
     display: flex;
     flex-direction: row;
@@ -101,6 +111,7 @@ html, body {
     align-self: flex-end;
     font-size: 24px;
     margin-right: 20px;
+    cursor: url(https://cur.cursors-4u.net/symbols/sym-3/sym253.ani), url(https://cur.cursors-4u.net/symbols/sym-3/sym253.png), auto !important;
 }
 
 /* Topbar */
@@ -206,6 +217,7 @@ html, body {
 
 .goal-info a {
     text-decoration: none;
+    cursor: url(https://cur.cursors-4u.net/symbols/sym-3/sym253.ani), url(https://cur.cursors-4u.net/symbols/sym-3/sym253.png), auto !important;
 }
 
 .goal-title {

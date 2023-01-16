@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/index-style.css" rel="stylesheet" type="text/css">
+    <!-- <link href="css/index-style.css" rel="stylesheet" type="text/css"> -->
     <link href="css/goal-page.css" rel="stylesheet" type="text/css">
     <title>Document</title>
 </head>
@@ -27,7 +27,7 @@
         <img src="images/pink-stars.jpeg" class="floating-stars">
         <div class="topbar">
             <div>
-                <p class="welc">Finish web project</p>
+                <p class="welc">finish web project</p>
             </div>
             <div class="signup/login-form">
             </div>
@@ -35,33 +35,41 @@
         <div class="content">
             <div class="content-center">
                 <div class="big-pink">
-                    <ul class = "goal-list">
-                        <li class="goal-entry">
-                            <div class="goal-info">
-                                <div class="goal-title">
-                                    <p>Finish web project</p>
-                                    <p>16-01-2023 23:30</p>
-                                    <p>
-                                        <span class="desc-mot">description: </span>check brightspace
-                                    </p>
-                                    <p>
-                                        <span class="desc-mot">motivation: </span>want to make bsa
-                                    </p>
-                                </div>
-                            </div>  
+                    <div class="goal-info">
+                        <div class="goal-title">
+                            <p>finish web project</p>
+                            <p>16-01-2023 23:30</p>
+                        </div>
+                        <div class="goal-desc">
+                            <p>
+                                <span class="desc-mot">description: </span>toilet seat broken after unfortunate wednesday incident, need to fix
+                            </p>
+                            <p>
+                                <span class="desc-mot">motivation: </span>really need to use the toilet
+                            </p>
+                        </div>
+                    </div>
+                    <ul class="subgoal-list">
+                        <li class="subgoal-entry">
+                            <div><p> contact partner about ugly home page</p></div>
+                            <button class = "boolean-sg" id="random-id" onclick="booleanClick(this)"> done</button>
                         </li>
-                        <li class="goal-entry">
-                            <div class="goal-info">
-                                <div class="goal-title">
-                                    <p>-contact partner about ugly home page</p>
-                                    <p>-download the figma chart for submission</p>
-                                    <p>-go over the division of responsibilities</p>
-                                    <p>-fix the cursor (giving up is an option for this one)</p>
-                                    <p>-reward yourself with a fun little beverage</p>
-                                </div>
-                            </div>
+                        <li class="subgoal-entry">
+                            <div><p> download figma chart for submission</p></div>
+                            <button class = "boolean-sg" id="random-id" onclick="booleanClick(this)">done</button>
                         </li>
-                    </ul>
+                        <li class="subgoal-entry">
+                            <div><p> go over the division of responsibilities</p></div>
+                            <button class = "boolean-sg" id="random-id" onclick="booleanClick(this)">done</button>
+                        </li>
+                        <li class="subgoal-entry">
+                            <div><p> fix the cursor (giving up is an option for this one)</p></div>
+                            <button class = "boolean-sg" id="random-id" onclick="booleanClick(this)">done</button>
+                        </li>
+                        <li class="subgoal-entry">
+                            <div><p> reward yourself with a fun little beverage</p></div>
+                            <button class = "boolean-sg" id="random-id" onclick="booleanClick(this)">2.35$</button>
+                        </li>
                 </div>
                 <div class="bottom-buttons">
                     <button class="add-goal" onclick = "window.location.href = 'home-page.html';">
@@ -71,6 +79,14 @@
                         save
                     </button>
                 </div>
+        </div>
     </div>
+
+    <script>
+        function booleanClick(elem) {
+            elem.parentElement.style.display = "none";
+    
+        }
+    </script>
 </body>
 </html>

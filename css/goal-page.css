@@ -2,10 +2,83 @@
 
 /* Main outer containers */
 html, body { 
-    overflow-y:hidden; 
+    cursor: local("t00624.cur"), wait;
+    overflow:hidden; 
     height: 100%;
     margin:0;
 }
+
+.floating-stars {
+    position: absolute;
+    top: 150px;
+    left: -50px;
+    mix-blend-mode: darken;
+    z-index: 0;
+    animation: scrollBanner 4s infinite;
+    image-rendering: pixelated;
+}
+
+.floating-stars:nth-of-type(2){
+    left:50vh;
+    /* width: 50%; */
+}
+
+.floating-stars:nth-of-type(3){
+    left:100vh;
+}
+
+.floating-stars:nth-of-type(4){
+    left:150vh;
+    /* width: 40%; */
+}
+
+.floating-stars:nth-of-type(5){
+    left:50vh;
+    top: 50%;
+}
+
+.floating-stars:nth-of-type(6){
+    left:100vh;
+    top: 50%;
+}
+
+.floating-stars:nth-of-type(7){
+    left:150vh;
+    top: 50%;
+}
+
+.floating-stars:nth-of-type(8){
+    /* left:150vh; */
+    top: 50%;
+}
+
+.floating-stars:nth-of-type(9){
+    left:150vh;
+    top:90%;
+}
+
+.floating-stars:nth-of-type(10){
+    left:100vh;
+    top: 90%;
+}
+
+.floating-stars:nth-of-type(11){
+    left:50vh;
+    top: 90%;
+}
+.floating-stars:nth-of-type(12){
+    /* left:150vh; */
+    top: 90%;
+}
+@keyframes scrollBanner {
+    from { transform : translateX(0) }
+    20% { transform: translateX(-10%) }
+    40% { transform: translateX(10%) }
+    60% { transform: translateX(-10%) }
+    80% { transform: translateX(10%) }
+    to   { transform : translateX(0) }
+}
+
 
 .home-page {
     color: #645CAA;
@@ -13,6 +86,7 @@ html, body {
     display: flex;
     flex-direction: column;
     font-family: "Jacques Francois";
+    overflow: auto;
 }
 
 .instr {
@@ -104,14 +178,15 @@ html, body {
 
 .goal-info {
     display: flex;
-    flex-direction: column;
-    flex-grow: 1;
+    flex-direction: row;
     background-color: #D9D9D9;
     font-family: "Jacques Francois";
     font-size: 20px;
     min-height: 18vh;
     padding-bottom: 10px;
+    margin: 20px;
 }
+
 
 .goal-info p {
     margin-top: 3;
@@ -124,7 +199,7 @@ html, body {
     display: flex;
     flex-direction: column;
     margin-top: 0;
-    vertical-align: top;
+    vertical-align: top; 
 }
 
 .goal-title p {
@@ -135,6 +210,17 @@ html, body {
 .goal-title p:nth-child(1){
     flex-grow: 1;
     font-size: 32px;
+}
+
+.goal-desc {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.goal-desc p {
+    margin-top: 0;
 }
 
 .desc-mot {
@@ -157,6 +243,61 @@ html, body {
     margin: 0;
 }
 
+.subgoal-list {
+    padding-left: 0;
+    margin-left: 20px;
+    margin-right: 20px;
+    max-height: 3vh;
+}
+
+.subgoal-entry {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    /* background-color: #D9D9D9; */
+    font-family: "Jacques Francois";
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.subgoal-entry div {
+    flex-grow: 1;
+    background-color: #D9D9D9;
+}
+
+.subgoal-entry p {
+    margin-left: 10px;
+    font-size: 22px;
+}
+
+.boolean-sg {
+    justify-self: end;
+    color: #645CAA;
+    background-color: #D9D9D9;
+    font-family: "Jacques Francois";
+    font-size: 24px;
+    min-width: 12vh;
+}
+
+.money-sg {
+    justify-self: end;
+    color: #645CAA;
+    background-color: #D9D9D9;
+    font-family: "Jacques Francois";
+    font-size: 24px;
+    min-width: 12vh;
+}
+
+.repeat-sg {
+    justify-self: end;
+    color: #645CAA;
+    background-color: #D9D9D9;
+    font-family: "Jacques Francois";
+    font-size: 20px;
+    min-width: 12vh;
+}
+
+
 .goal-info:focus {
     -webkit-box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
     -moz-box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
@@ -174,7 +315,7 @@ html, body {
     transition: all 0.3s;
 }
 
-.subgoals-completed:focus {
+.subgoal-entry div:focus {
     -webkit-box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
     -moz-box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
     box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
@@ -183,7 +324,7 @@ html, body {
     transition: all 0.3s;
 }
 
-.subgoals-completed:hover {
+.subgoal-entry div:hover {
     -webkit-box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
     -moz-box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
     box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
@@ -191,7 +332,7 @@ html, body {
     transition: all 0.3s;
 }
 
-.add-goal:focus {
+button:focus {
     -webkit-box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
     -moz-box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
     box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
@@ -200,7 +341,7 @@ html, body {
     transition: all 0.3s;
 }
 
-.add-goal:hover {
+button:hover {
     -webkit-box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
     -moz-box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
     box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);

@@ -8,6 +8,77 @@ html, body {
     cursor: url(https://cur.cursors-4u.net/symbols/sym-3/sym253.ani), url(https://cur.cursors-4u.net/symbols/sym-3/sym253.png), auto !important;
 }
 
+.floating-stars {
+    position: absolute;
+    top: 150px;
+    left: -50px;
+    mix-blend-mode: darken;
+    z-index: 0;
+    animation: scrollBanner 4s infinite;
+    image-rendering: pixelated;
+}
+
+.floating-stars:nth-of-type(2){
+    left:50vh;
+    /* width: 50%; */
+}
+
+.floating-stars:nth-of-type(3){
+    left:100vh;
+}
+
+.floating-stars:nth-of-type(4){
+    left:150vh;
+    /* width: 40%; */
+}
+
+.floating-stars:nth-of-type(5){
+    left:50vh;
+    top: 50%;
+}
+
+.floating-stars:nth-of-type(6){
+    left:100vh;
+    top: 50%;
+}
+
+.floating-stars:nth-of-type(7){
+    left:150vh;
+    top: 50%;
+}
+
+.floating-stars:nth-of-type(8){
+    /* left:150vh; */
+    top: 50%;
+}
+
+.floating-stars:nth-of-type(9){
+    left:150vh;
+    top:90%;
+}
+
+.floating-stars:nth-of-type(10){
+    left:100vh;
+    top: 90%;
+}
+
+.floating-stars:nth-of-type(11){
+    left:50vh;
+    top: 90%;
+}
+.floating-stars:nth-of-type(12){
+    /* left:150vh; */
+    top: 90%;
+}
+
+.bottom-buttons {
+    display: flex;
+    flex-direction: row;
+    padding-right: 10px;
+    padding-left: 10px;
+    z-index: 1;
+}
+
 .home-page {
     color: #645CAA;
     height: 100%;
@@ -20,9 +91,13 @@ html, body {
     font-size: 30px;
 }
 
+a {
+    font-size: 30px;
+}
 
 /* Topbar */
 .topbar {
+    z-index: 1;
     background-color: #A084CA;
     height: 150px;
     display: flex;
@@ -62,6 +137,7 @@ html, body {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+    z-index: 1;
     background-color: #EBC7E8;
     width: 100%;
     max-height: 60vh;

@@ -16,12 +16,12 @@ html, body {
     font-family: "Jacques Francois";
 }
 
-.floating-stars {
+/* .floating-stars {
     position: absolute;
     top: 150px;
     mix-blend-mode: darken;
     z-index: 0;
-}
+} */
 
 .floating-stars {
     position: absolute;
@@ -30,10 +30,60 @@ html, body {
     mix-blend-mode: darken;
     z-index: 0;
     animation: scrollBanner 4s infinite;
+    image-rendering: pixelated;
 }
 
 .floating-stars:nth-of-type(2){
-    left:60vh;
+    left:50vh;
+    /* width: 50%; */
+}
+
+.floating-stars:nth-of-type(3){
+    left:100vh;
+}
+
+.floating-stars:nth-of-type(4){
+    left:150vh;
+    /* width: 40%; */
+}
+
+.floating-stars:nth-of-type(5){
+    left:50vh;
+    top: 50%;
+}
+
+.floating-stars:nth-of-type(6){
+    left:100vh;
+    top: 50%;
+}
+
+.floating-stars:nth-of-type(7){
+    left:150vh;
+    top: 50%;
+}
+
+.floating-stars:nth-of-type(8){
+    /* left:150vh; */
+    top: 50%;
+}
+
+.floating-stars:nth-of-type(9){
+    left:150vh;
+    top:90%;
+}
+
+.floating-stars:nth-of-type(10){
+    left:100vh;
+    top: 90%;
+}
+
+.floating-stars:nth-of-type(11){
+    left:50vh;
+    top: 90%;
+}
+.floating-stars:nth-of-type(12){
+    /* left:150vh; */
+    top: 90%;
 }
 
 @keyframes scrollBanner {
@@ -102,6 +152,20 @@ html, body {
     padding-bottom: 50px; */
 }
 
+.signup-format {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+}
+
+/* .signup-format > * {
+    align-self: center;
+    align-items: center;
+    align-content: center;
+} */
 
 /* Signup and login boxes */
 .signup-login {

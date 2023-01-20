@@ -57,24 +57,24 @@
                     <p>start your journey:</p>
                     <form class="signup/login-form" action="home-page.html">
                         <div class="signup-format"> 
-                            <input type="text" placeholder="name" name="name:" id="user-name" value="">
-                            <input type="text" placeholder="email" name="email:" id="email" value="">
+                            <input type="text" placeholder="name" name="name:" id="user-name" value="" pattern="^[A-Z].*?([0-9]|[-._!`'#%&,:;<>=@{}~\$\(\)\*\+\/\\\?\[\]\^\|])$" required>  //alpha only
+                            <input type="text" placeholder="email" name="email:" id="email" value="" required>    //valid email addr
                         </div>
                         <div class="signup-format"> 
-                            <input type="text" placeholder="username" name="username:" id="usern-signin" value="">
-                            <input type="text" placeholder="password" name="password:" id="password-signin" value="">
+                            <input type="text" placeholder="username" name="username:" id="usern-signin" value="" minlength="5" maxlength="12" required >
+                            <input type="text" placeholder="password" name="password:" id="password-signin" value="" minlength="12" required> //upper, lower, num, sym
                         </div>
                         <div class="signup-format"> 
                             <input type="text" placeholder="address" name="addr:" id="user-addr" value="">
-                            <input type="text" placeholder="country" name="country:" id="user-country" value="">    
+                            <input type="text" placeholder="country" name="country:" id="user-country" required value="">    
                         </div>
                         <div class="signup-format"> 
-                            <input type="text" placeholder="zip" name="zip:" id="user-zip" value="">
-                            <input type="text" placeholder="sex" name="country:" id="user-country" value=""> 
+                            <input type="text" placeholder="zip" name="zip:" id="user-zip" value=""> //valid nl postal code
+                            <input type="text" placeholder="sex" name="sex:" id="user-sex" required value=""> 
                         </div>
                         <div class="signup-format"> 
-                            <input type="text" placeholder="language" name="country:" id="user-country" value="">
-                            <input type="text" placeholder="bio" name="country:" id="user-country" value="">
+                            <input type="text" placeholder="language" name="country:" id="user-language" required value="">
+                            <input type="text" placeholder="bio" name="country:" id="user-bio" value="">
                         </div>
                         <input type="submit" value="sign up">
                     </form>

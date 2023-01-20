@@ -161,6 +161,14 @@ ul {
     border: none; 
 }
 
+.std-frm input:valid {
+    background-color: green;
+}
+
+.std-frm input:invalid {
+    background-color: red;
+}
+
 /* .std-frm input[type=text]:nth-child(1){
     margin-bottom: 30px;
     margin-top: 5px

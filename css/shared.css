@@ -151,7 +151,7 @@ ul {
     flex-wrap: wrap;
 }
 
-.std-frm input[type=text] {
+.std-frm input {
     color: #645CAA;
     background-color: #D9D9D9;
     font-family: "Jacques Francois";
@@ -161,12 +161,8 @@ ul {
     border: none; 
 }
 
-.std-frm input:valid {
-    background-color: green;
-}
-
 .std-frm input:invalid {
-    background-color: red;
+    color:#FF6961;
 }
 
 /* .std-frm input[type=text]:nth-child(1){
@@ -178,7 +174,7 @@ ul {
     margin-bottom: 5px
 } */
 
-.std-frm input[type=text]:focus {
+.std-frm input:focus {
     -webkit-box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
     -moz-box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
     box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
@@ -187,7 +183,7 @@ ul {
     transition: all 0.3s;
 }
 
-.std-frm input[type=text]:hover {
+.std-frm input:hover {
     -webkit-box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
     -moz-box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
     box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);

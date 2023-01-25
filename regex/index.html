@@ -8,7 +8,6 @@
     <link href="css/shared.css" rel="stylesheet" type="text/css">
     <title>Sign in/Sign up</title>
 </head>
-<script type="text/javascript" src="js/PartTwo.js"></script>
 <body>
     <div class="page">
         <img src="images/pink-stars.jpeg" class="floating-stars">
@@ -69,7 +68,7 @@
                             <input type="text" placeholder="country" name="country:" id="user-country" required value="">    
                         </div>
                         <div class="signup-format"> 
-                            <input type="text" placeholder="zip" name="zip" id="user-zip" value="" onchange="vpc(this)" required>
+                            <input type="text" placeholder="zip" name="zip" id="user-zip" value=""  required>
                             <input type="text" placeholder="sex" name="sex:" id="user-sex" required value=""> 
                         </div>
                         <div class="signup-format"> 
@@ -80,8 +79,14 @@
                     </form>
                 </div>
             </div>
+            <div class = "hidden">
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+            </div>
         </div>
     </div>
-    <script type="text/javascript" src="js/partOne.js"></script>
+    <script type="text/javascript" src="js/partTwo.js"></script>
 </body>
 </html>

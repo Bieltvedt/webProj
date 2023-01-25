@@ -2,7 +2,6 @@ window.onload = init;
 
 
 function init() {
-    initTwo();
     console.log("test");
     const req = ["name", "email", "username", "password", "country", "zip", "sex", "language"];
     const signup = document.getElementById("signup-form");
@@ -22,7 +21,7 @@ function init() {
         }
 
         let valid = reqValid && pcValid && pwValid && nmValid && emValid && unValid;
-        if(valid) {revealStats();}
+        if(valid) {signup.submit;}
         if(!valid){
             alert("Unable to submit form");
         }
@@ -161,6 +160,6 @@ function vun(un){       //username
 }
 
 function required(el) {
-    if(el === "") return false;
+    if(el.value === "") return false;
     else return true;
 }

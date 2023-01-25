@@ -36,7 +36,10 @@ function vpc(pc){       //postcode DOESNT WORK FOR SOME REASON?
 
     pc.style.color = "#645CAA";
 
-    if (val.length != 6) return false;
+    if (val.length != 6) {
+        pc.style.color = "#FF6961";
+        return false;
+    }
     if (val.charAt(0) != ('1'||'2'||'3'||'4'||'5'||'6'||'7'||'8'||'9'||'0')) {
         pc.style.color = "#FF6961";
         return false;

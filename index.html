@@ -8,7 +8,6 @@
     <link href="css/shared.css" rel="stylesheet" type="text/css">
     <title>Sign in/Sign up</title>
 </head>
-<script type="text/javascript" src="js/partOne.js"></script>
 <script type="text/javascript" src="js/PartTwo.js"></script>
 <body>
     <div class="page">
@@ -56,21 +55,21 @@
                 </div>
                 <div class="std-frm">
                     <p>start your journey:</p>
-                    <form class="signup/login-form" action="home-page.html" id="signup-form" onsubmit="return validateForm(this)">
+                    <form class="signup/login-form" action="home-page.html" id="signup-form">
                         <div class="signup-format"> 
                             <input type="text" placeholder="name" name="name:" id="user-name" value="" pattern="[A-z]+" required> 
                             <input type="email" placeholder="email" name="email:" id="email" value="" required>
                         </div>
                         <div class="signup-format"> 
                             <input type="text" placeholder="username" name="username:" id="usern-signin" value="" minlength="5" maxlength="12" pattern="^[A-Z].*?([0-9]|[-._!`'#%&,:;<>=@{}~\$\(\)\*\+\/\\\?\[\]\^\|])$" required >
-                            <input type="text" placeholder="password" name="password:" id="password-signin" value="" minlength="12" required>
+                            <input type="text" placeholder="password" name="password" id="password-signin" value="" minlength="12" required>
                         </div>
                         <div class="signup-format"> 
                             <input type="text" placeholder="address" name="addr:" id="user-addr" value="">
                             <input type="text" placeholder="country" name="country:" id="user-country" required value="">    
                         </div>
                         <div class="signup-format"> 
-                            <input type="text" placeholder="zip" name="zip:" id="user-zip" value="" onchange="vpc(this)" required>
+                            <input type="text" placeholder="zip" name="zip" id="user-zip" value="" onchange="vpc(this)" required>
                             <input type="text" placeholder="sex" name="sex:" id="user-sex" required value=""> 
                         </div>
                         <div class="signup-format"> 
@@ -83,5 +82,6 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript" src="js/partOne.js"></script>
 </body>
 </html>

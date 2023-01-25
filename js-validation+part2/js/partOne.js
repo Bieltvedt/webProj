@@ -2,8 +2,9 @@ window.onload = init;
 
 
 function init() {
+    initTwo();
     console.log("test");
-    const required = ["name", "email", "username", "password", "country", "zip", "sex", "language"];
+    const req = ["name", "email", "username", "password", "country", "zip", "sex", "language"];
     const signup = document.getElementById("signup-form");
     signup.addEventListener("submit", (event) => {
         
@@ -16,15 +17,14 @@ function init() {
         let unValid = vun(signup.elements["username"]);
 
         let reqValid = true;
-        for(n of required){
+        for(n of req){
             reqValid = reqValid && required(signup.elements[n]);
         }
 
         let valid = reqValid && pcValid && pwValid && nmValid && emValid && unValid;
-        if(valid){
-            signup.submit()
-        }else {
-            alert("Unable to submit form")
+        if(valid) {revealStats();}
+        if(!valid){
+            alert("Unable to submit form");
         }
 
     });
@@ -128,14 +128,14 @@ function vnm(nm) {      //name
 function vem(em){       //email 
     let val = em.value;
 
-    let att = em.indexOf("@");
-    let dot = em.indexOf(".");
+    let att = val.indexOf("@");
+    let dot = val.indexOf(".");
     
     if (dot <= att + 1) return false;
 
-    if (dot.em.length - 1) return false; 
+    if (dot.length - 1) return false; 
 
-    if (at < 2) return false;
+    if (att < 2) return false;
 
     // if(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(val)){
     //     pw.style.color = "#645CAA";

@@ -1,9 +1,9 @@
-window.onload = init;
 let clickCount = 0;
 let charCount = 0;
 let kpCount = 0;
+let date;
 
-function init(){
+function initTwo(){
   buttons = document.querySelectorAll('button');
   for(button of buttons) {
     button.addEventListener('click', buttonClick)
@@ -14,7 +14,7 @@ function init(){
     input.addEventListener(onkeydown, formKeyPress(e))
   }
 
-  var date = new Date();
+  date = new Date();
 
 }
 

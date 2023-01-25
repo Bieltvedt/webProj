@@ -8,7 +8,6 @@
     <link href="css/shared.css" rel="stylesheet" type="text/css">
     <title>Sign in/Sign up</title>
 </head>
-<script type="text/javascript" src="js/PartTwo.js"></script>
 <body>
     <div class="page">
         <img src="images/pink-stars.jpeg" class="floating-stars">
@@ -55,21 +54,21 @@
                 </div>
                 <div class="std-frm">
                     <p>start your journey:</p>
-                    <form class="signup/login-form" id="signup-form" onsubmit="revealStats()">
+                    <form class="signup/login-form" id="signup-form">
                         <div class="signup-format"> 
-                            <input type="text" placeholder="name" name="name" id="name" value="" onkeydown="vnm(this)"> 
-                            <input type="text" placeholder="email" name="email" id="email" value="" onkeydown="vem(this)">
+                            <input type="text" placeholder="name" name="name" id="name" value="" onchange="vnm(this)"> 
+                            <input type="text" placeholder="email" name="email" id="email" value="" onchange="vem(this)">
                         </div>
                         <div class="signup-format"> 
-                            <input type="text" placeholder="username" name="username" id="usern-signin" value="" onkeydown="vun(this)" >
-                            <input type="text" placeholder="password" name="password" id="password-signin" value="" onkeydown="vpw(this)">
+                            <input type="text" placeholder="username" name="username" id="usern-signin" value="" onchange="vun(this)" >
+                            <input type="text" placeholder="password" name="password" id="password-signin" value="" onchange="vpw(this)">
                         </div>
                         <div class="signup-format"> 
                             <input type="text" placeholder="address" name="addr" id="user-addr" value="">
                             <input type="text" placeholder="country" name="country" id="user-country" value="">    
                         </div>
                         <div class="signup-format"> 
-                            <input type="text" placeholder="zip" name="zip" id="user-zip" value="" onkeydown="vpc(this)">
+                            <input type="text" placeholder="zip" name="zip" id="user-zip" value="" onchange="vpc(this)">
                             <input type="text" placeholder="sex" name="sex" id="user-sex" value=""> 
                         </div>
                         <div class="signup-format"> 
@@ -88,6 +87,7 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript" src="js/PartTwo.js"></script>
     <script type="text/javascript" src="js/partOne.js"></script>
 </body>
 </html>

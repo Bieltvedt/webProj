@@ -31,56 +31,59 @@ function init() {
 }
 
 
-function vpc(pc){       //postcode DOESNT WORK FOR SOME REASON? 
+function vpc(pc){       //postcode GOOD. ONLY CHECKS IF FIRST 4 CHAR ARE nums and rest arent nums. and length 
     let val = pc.value;
 
     pc.style.color = "#645CAA";
 
+    let zero = val.charAt(0);
+    let one = val.charAt(1);
+    let two = val.charAt(2);
+    let three = val.charAt(3);
+    let charone = val.charAt(4);
+    let chartwo = val.charAt(5);
+
     if (val.length != 6) {
         pc.style.color = "#FF6961";
-        return false;
+        console.log("wrong length");
+        return false; 
     }
-    if (val.charAt(0) != ('1'||'2'||'3'||'4'||'5'||'6'||'7'||'8'||'9'||'0')) {
+
+
+    if (zero <= '0' && zero >= '9') {
         pc.style.color = "#FF6961";
-        return false;
-    } 
-    if (val.charAt(1) != ('1'||'2'||'3'||'4'||'5'||'6'||'7'||'8'||'9'||'0')) { 
-        pc.style.color = "#FF6961";
-        return false;
+        console.log("zip char 0");
+        return false; 
     }
-    if (val.charAt(2) != ('1'||'2'||'3'||'4'||'5'||'6'||'7'||'8'||'9'||'0')) {
+
+    if (one <= '0' && one >= '9') {
         pc.style.color = "#FF6961";
-        return false;
+        console.log("zip char 2");
+        return false; 
     }
-    if (val.charAt(3) != ('1'||'2'||'3'||'4'||'5'||'6'||'7'||'8'||'9'||'0')) {
+
+    if (two <= '0' && two >= '9') {
         pc.style.color = "#FF6961";
-        return false;
+        console.log("zip char 1");
+        return false; 
     }
-    if (val.charAt(4) != 'A') {
+
+    if (three <= '0' && three >= '9') {
         pc.style.color = "#FF6961";
-        return false;
+        console.log("zip char 3");
+        return false; 
     }
-    if (val.charAt(5) != 'A') {
-        pc.style.color = "#FF6961";
-        return false;
-    }
-        
-        
-        
-    //     ||'B'||'C'||'D'||'E'||'F'||'G'||'H'||'I'||'J'||'K'||'L'||'M'||'N'||'O'||'P'||'R'||'S'||'T'||'Q'||'W'||'X'||'Z')) {
+
+    // if (three >= '0' && three <= '9') {
     //     pc.style.color = "#FF6961";
-    //     return false;
+    //     console.log("zip letter 1 ");
+    //     return false; 
     // }
 
-
-
-    // if(/^[0-9]{4}[A-Z]{2}$/.test(val)){
-    //     pc.style.color = "#645CAA";
-    //     return true;
-    // }else {
+    // if (three <= '0' && three >= '9') {
     //     pc.style.color = "#FF6961";
-    //     return false;
-    //     alert("please use a valid nl. postcode")
+    //     console.log("zip letter 2");
+    //     return false; 
     // }
 }
 
@@ -90,8 +93,6 @@ function vpw(pw) {      //password
     pw.style.color = "#FF6961";
 
     var us = false;
-
-    console.log("AAAAAAAAAAAAA");
 
     if (val == null) return false;
 
@@ -107,26 +108,17 @@ function vpw(pw) {      //password
     }
 
     return us;
-
-    // if(val.length > 12 && /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])((?=.*\W)|(?=.*_))^[^ ]+$/.test(val)){
-    //     pw.style.color = "#645CAA";
-    //     return true;
-    // }else {
-    //     pw.style.color = "#FF6961";
-    //     return false;
-    //     alert()
-    // }
 }
 
 function vnm(nm) {      //name
     let val = nm.value;
 
     if (val.includes('!') || val.includes('@') || val.includes('#') || val.includes('$') || val.includes('%') || val.includes('^') || val.includes('&') || val.includes('*') || val.includes('(') || val.includes(')') || val.includes('-') || val.includes('_') || val.includes('=') || val.includes('+') || val.includes('[') || val.includes(']') || val.includes('{') || val.includes('}') || val.includes(';') || val.includes(':') || val.includes('"') || val.includes('<') || val.includes(',') || val.includes('>') || val.includes('.') || val.includes('/') || val.includes('?') || val.includes('!')) {
-        pc.style.color = "#FF6961";
+        nm.style.color = "#FF6961";
         return false;
     }
     if ( val.includes('1') ||  val.includes('2') ||  val.includes('3') ||  val.includes('4') ||  val.includes('5') ||  val.includes('6') ||  val.includes('7') ||  val.includes('8') ||  val.includes('9') ||  val.includes('0')) {
-        pc.style.color = "#FF6961";
+        nm.style.color = "#FF6961";
         return false; 
     }
 
@@ -145,19 +137,20 @@ function vem(em){       //email
     let att = val.indexOf("@");
     let dot = val.indexOf(".");
     
-    if (dot <= att + 1) return false;
+    if (dot <= att + 1) {
+        em.style.color = "#FF6961";
+        return false;
+    }
 
-    if (dot.length - 1) return false; 
+    if (dot.length - 1) {
+        em.style.color = "#FF6961";
+        return false; 
+    }
 
-    if (att < 2) return false;
-
-    // if(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(val)){
-    //     pw.style.color = "#645CAA";
-    //     return true;
-    // }else {
-    //     pw.style.color = "#FF6961";
-    //     return false;
-    // }
+    if (att < 2) {
+        em.style.color = "#FF6961";
+        return false;
+    }
 }
 
 function vun(un){       //username

@@ -1,3 +1,4 @@
+
 window.onload = init;
 let clickCount = 0;
 let charCount = 0;
@@ -32,3 +33,4 @@ var formKeyPress = (e) => {
 
 var revealStats = () => {
   let hidden = 
+}

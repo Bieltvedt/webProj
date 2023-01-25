@@ -4,7 +4,7 @@ window.onload = init;
 function init() {
     console.log("test");
     const required = ["name", "email", "username", "password", "country", "zip", "sex", "language"];
-    const signup = document.getElementById("signup-form");
+    const signup = document.getElementById("#signup-form");
     signup.addEventListener("submit", (event) => {
         
         event.preventDefault();

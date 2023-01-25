@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Jacques+Francois&display=swap');
+
+
+/* base */
+html, body { 
+    overflow:hidden; 
+    height: 100%;
+    margin:0;
+    cursor: url(https://cur.cursors-4u.net/symbols/sym-3/sym253.ani), url(https://cur.cursors-4u.net/symbols/sym-3/sym253.png), auto !important;
+}
+.page {
+    color: #645CAA;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: "Jacques Francois";
+    overflow-y: hidden;
+}
+
+
+
+/* Topbar */
+.topbar {
+    z-index: 1;
+    background-color: #A084CA;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+}
+.topbar div {
+    flex: 1 1 0;
+}
+.welc {
+    font-size: 75px;
+}
+.instr {
+    font-size: 30px;
+}
+
+
+
+/* Content cointainer */
+.content {
+    background-color: #BFACE0;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin:0;
+}
+.content-center {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    /* padding-top: 50px;
+    padding-bottom: 50px; */
+}
+
+
+
+/* pink content box */
+.big-pink {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background-color: #EBC7E8;
+    width: 100%;
+    max-height: 60vh;
+    overflow-y: scroll;
+    -webkit-box-shadow: 10px 11px 12px 2px rgba(0,0,0,0.45);
+    -moz-box-shadow: 10px 11px 12px 2px rgba(0,0,0,0.45);
+    box-shadow: 10px 11px 12px 2px rgba(0,0,0,0.45);
+    transition: all 0.4s;
+}
+
+
+
+/* standard button */
+.std-btn {
+    color: #645CAA;
+    background-color: #D9D9D9;
+    font-family: "Jacques Francois";
+    font-size: 24px;
+    min-width: 26vh;
+    min-height: 10vh;
+    z-index: 1;
+    cursor: url(https://cur.cursors-4u.net/symbols/sym-3/sym253.ani), url(https://cur.cursors-4u.net/symbols/sym-3/sym253.png), auto !important;
+}
+
+
+/* button shadow on hover or focus*/
+button:focus {
+    -webkit-box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
+    -moz-box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
+    box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
+    outline: none;
+    border: 3px outset #645CAA;
+    transition: all 0.3s;
+}
+button:hover {
+    -webkit-box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
+    -moz-box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
+    box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
+    outline: none;
+    transition: all 0.3s;
+}
+
+
+/* no padding on lists */
+ul {
+    padding-left: 0;
+}
+
+
+/* standard form */
+
+.std-frm {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background-color: #EBC7E8;
+    width: 100%;
+    -webkit-box-shadow: 10px 11px 12px 2px rgba(0,0,0,0.45);
+    -moz-box-shadow: 10px 11px 12px 2px rgba(0,0,0,0.45);
+    box-shadow: 10px 11px 12px 2px rgba(0,0,0,0.45);
+    transition: all 0.4s;
+    overflow-y: scroll;
+}
+
+.std-frm * {
+    z-index: 1;
+}
+
+.std-frm p {
+    align-self: flex-start;
+    font-size: 30px;
+}
+
+.std-frm form {
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.std-frm input {
+    color: #645CAA;
+    background-color: #D9D9D9;
+    font-family: "Jacques Francois";
+    font-size: 24px;
+    min-height: 5vh;
+    transition: all 0.4s;
+    border: none; 
+}
+
+.std-frm input:invalid {
+    color:#FF6961;
+}
+
+/* .std-frm input[type=text]:nth-child(1){
+    margin-bottom: 30px;
+    margin-top: 5px
+}
+
+.std-frm input[type=text]:nth-child(2){
+    margin-bottom: 5px
+} */
+
+.std-frm input:focus {
+    -webkit-box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
+    -moz-box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
+    box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
+    outline: none;
+    border: 3px outset #645CAA;
+    transition: all 0.3s;
+}
+
+.std-frm input:hover {
+    -webkit-box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
+    -moz-box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
+    box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
+    outline: none;
+    transition: all 0.3s;
+}
+
+.std-frm input[type=submit] {
+    color: #645CAA;
+    background-color: #D9D9D9;
+    font-family: "Jacques Francois";
+    font-size: 25px;
+    min-height: 6vh;
+    width: max-content;
+    padding-left: 30px;
+    padding-right: 30px;
+    align-self: center;
+    /* -webkit-box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
+    -moz-box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
+    box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45); */
+    /* unsure if with or without border is better */
+    border: none; 
+    cursor: url(https://cur.cursors-4u.net/symbols/sym-3/sym253.ani), url(https://cur.cursors-4u.net/symbols/sym-3/sym253.png), auto !important;
+}
+
+.std-frm input[type=submit]:focus {
+    -webkit-box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
+    -moz-box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
+    box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
+    outline: none;
+}
+
+.std-frm input[type=submit]:hover {
+    -webkit-box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
+    -moz-box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
+    box-shadow: 10px 15px 12px -3px rgba(0,0,0,0.45);
+    outline: none;
+    transition: all 0.2s;
+}
+
+
+
+/* Star animation */
+.floating-stars {
+    position: absolute;
+    top: 150px;
+    left: -50px;
+    mix-blend-mode: darken;
+    z-index: 0;
+    animation: scrollBanner 4s infinite;
+    image-rendering: pixelated;
+}
+.floating-stars:nth-of-type(2){
+    left:50vh;
+    /* width: 50%; */
+}
+.floating-stars:nth-of-type(3){
+    left:100vh;
+}
+.floating-stars:nth-of-type(4){
+    left:150vh;
+    /* width: 40%; */
+}
+.floating-stars:nth-of-type(5){
+    left:50vh;
+    top: 50%;
+}
+.floating-stars:nth-of-type(6){
+    left:100vh;
+    top: 50%;
+}
+.floating-stars:nth-of-type(7){
+    left:150vh;
+    top: 50%;
+}
+.floating-stars:nth-of-type(8){
+    /* left:150vh; */
+    top: 50%;
+}
+.floating-stars:nth-of-type(9){
+    left:150vh;
+    top:90%;
+}
+.floating-stars:nth-of-type(10){
+    left:100vh;
+    top: 90%;
+}
+.floating-stars:nth-of-type(11){
+    left:50vh;
+    top: 90%;
+}
+.floating-stars:nth-of-type(12){
+    /* left:150vh; */
+    top: 90%;
+}
+@keyframes scrollBanner {
+    from { transform : translateX(0) }
+    20% { transform: translateX(-10%) }
+    40% { transform: translateX(10%) }
+    60% { transform: translateX(-10%) }
+    80% { transform: translateX(10%) }
+    to   { transform : translateX(0) }
+}

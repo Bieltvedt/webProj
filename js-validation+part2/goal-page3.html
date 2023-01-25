@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/shared.css" rel="stylesheet" type="text/css">
+    <link href="css/goal-page.css" rel="stylesheet" type="text/css">
+    <title>(:</title>
+</head>
+<body>
+    <div class="page">
+        <img src="images/pink-stars.jpeg" class="floating-stars">
+        <img src="images/pink-stars.jpeg" class="floating-stars">
+        <img src="images/pink-stars.jpeg" class="floating-stars">
+        <img src="images/pink-stars.jpeg" class="floating-stars">
+
+        <img src="images/pink-stars.jpeg" class="floating-stars">
+        <img src="images/pink-stars.jpeg" class="floating-stars">
+        <img src="images/pink-stars.jpeg" class="floating-stars">
+        <img src="images/pink-stars.jpeg" class="floating-stars">
+
+        <img src="images/pink-stars.jpeg" class="floating-stars">
+        <img src="images/pink-stars.jpeg" class="floating-stars">
+        <img src="images/pink-stars.jpeg" class="floating-stars">
+        <img src="images/pink-stars.jpeg" class="floating-stars">
+        <img src="images/pink-stars.jpeg" class="floating-stars">
+        <div class="topbar">
+            <div>
+                <p class="welc">listen to music recs</p>
+            </div>
+        </div>
+        <div class="content">
+            <div class="content-center">
+                <div class="big-pink">
+                    <div class="goal-info">
+                        <div class="goal-title">
+                            <p>listen to music recs</p>
+                            <p>19-01-2023 20:00</p>
+                        </div>
+                        <div class="goal-desc">
+                            <p>
+                                <span class="desc-mot">description: </span>literally just sit and listen
+                            </p>
+                            <p>
+                                <span class="desc-mot">motivation: </span>people will be mad if i dont listen to any of their suggestions):
+                            </p>
+                        </div>
+                    </div>
+                    <ul class="subgoal-list">
+                        <li class="subgoal-entry">
+                            <div><p>consider if job will be executed on the bus or on the bench</p></div>
+                            <button class = "boolean-sg" id="random-id" onclick="booleanClick(this)"> done</button>
+                        </li>
+                        <li class="subgoal-entry">
+                            <div><p>make sure to pick beverage suiting for the musical genre involved</p></div>
+                            <button class = "boolean-sg" id="random-id" onclick="booleanClick(this)">done</button>
+                        </li>
+                        <li class="subgoal-entry">
+                            <div><p>acquire said beverage</p></div>
+                            <button class = "money-sg" id="random-id" onclick="booleanClick(this)">5.00$</button>
+                        </li>
+                        <li class="subgoal-entry">
+                            <div><p>check weather to make sure it is suitable for the musical genre</p></div>
+                            <button class = "boolean-sg" id="random-id" onclick="booleanClick(this)">done</button>
+                        </li>
+                        <li class="subgoal-entry">
+                            <div><p>make sure headphones have enough battery</p></div>
+                            <button class = "boolean-sg" id="random-id" onclick="booleanClick(this)">done</button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bottom-buttons">
+                    <button class="std-btn" onclick = "window.location.href = 'home-page.html';">
+                        add subgoal (not functional)
+                    </button>
+                    <button class="std-btn" onclick = "window.location.href = 'home-page.html';">
+                        save
+                    </button>
+                </div>
+        </div>
+    </div>
+
+    <script>
+        function booleanClick(elem) {
+            elem.parentElement.style.display = "none";
+    
+        }
+    </script>
+</body>
+</html>

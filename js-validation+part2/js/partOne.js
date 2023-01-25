@@ -30,7 +30,7 @@ function init() {
 }
 
 
-function vpc(pc){
+function vpc(pc){       //postcode DOESNT WORK FOR SOME REASON? 
     let val = pc.value;
 
     if(/^[0-9]{4}[A-Z]{2}$/.test(val)){
@@ -39,60 +39,17 @@ function vpc(pc){
     }else {
         pc.style.color = "#FF6961";
         return false;
-        alert("please use a valid nl. postcode")
     }
 }
 
-function vpw(pw) {
+function vpw(pw) {      //password
     let val = pw.value;
 
-    if(val.length > 12 && /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])((?=.*\W)|(?=.*_))^[^ ]+$/.test(val)){
-        pw.style.color = "#645CAA";
-        return true;
-    }else {
-        pw.style.color = "#FF6961";
-        return false;
-        alert()
-    }
-}
-
-function vnm(nm) {
-    let val = nm.value;
-
-    if(/[A-z]+/.test(val)){
+    if(/(?=.*\d)(?=.*[a-z])(?=.*[A-Z])((?=.*\W)|(?=.*_))^[^ ]+$/.test(val)){
         pw.style.color = "#645CAA";
         return true;
     }else {
         pw.style.color = "#FF6961";
         return false;
     }
-}
-
-function vem(em){
-    let val = em.value;
-
-    if(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(val)){
-        pw.style.color = "#645CAA";
-        return true;
-    }else {
-        pw.style.color = "#FF6961";
-        return false;
-    }
-}
-
-function vun(un){
-    let val = un.value;
-
-    if(val.length > 5 && val.length && /^[A-Z].*?([0-9]|[-._!`'#%&,:;<>=@{}~\$\(\)\*\+\/\\\?\[\]\^\|])$/.test(val)){
-        pw.style.color = "#645CAA";
-        return true;
-    }else {
-        pw.style.color = "#FF6961";
-        return false;
-    }
-}
-
-function required(el) {
-    if(el === "") return false;
-    else return true;
 }

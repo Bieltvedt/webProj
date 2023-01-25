@@ -21,7 +21,7 @@ function init() {
         }
 
         let valid = reqValid && pcValid && pwValid && nmValid && emValid && unValid;
-        if(valid) {signup.submit;}
+        if(valid) {signup.submit();}
         if(!valid){
             alert("Unable to submit form");
         }
@@ -99,6 +99,7 @@ function vem(em){       //email
 
     let att = val.indexOf("@");
     let dot = val.indexOf(".");
+    em.style.color = "645CAA";
     
     if (dot <= att + 1) {
         em.style.color = "#FF6961";
@@ -110,7 +111,10 @@ function vem(em){       //email
         return false; 
     }
 
-    if (att < 2) return false;
+    if (att < 2) {
+        em.style.color = "#FF6961";
+        return false;
+    }
 
     return true;
 }
@@ -134,6 +138,12 @@ function vun(un){       //username
 }
 
 function required(el) {
-    if(el.value === "") return false;
-    else return true;
+    if(el.value === "") {
+        el.style.color = "#FF6961";
+        return false;
+    }
+    else {
+        el.style.color = "645CAA";
+        return true;
+    }
 }

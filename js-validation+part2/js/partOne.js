@@ -8,6 +8,7 @@ function init() {
     signup.addEventListener("submit", (event) => {
         
         event.preventDefault();
+        
         let pcValid = vpc(signup.elements["zip"]);
         let pwValid = vpw(signup.elements["password"]);
         let nmValid = vnm(signup.elements["name"]);
